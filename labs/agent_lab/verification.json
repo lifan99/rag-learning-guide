@@ -1,0 +1,25 @@
+{
+  "checked_on": "2026-10-27",
+  "python": "3.12.3",
+  "core_tests": 13,
+  "core_passed": 13,
+  "scripted_evaluation_scenarios": 6,
+  "scripted_passed": 6,
+  "mcp_sdk": "2.3.0",
+  "mcp_stdio_integration_tests": 1,
+  "mcp_stdio_passed": 1,
+  "live_model_calls_performed": false,
+  "checks": [
+    "approval required before local write",
+    "idempotent resume after business commit",
+    "replay from committed tool journal",
+    "ownership and parameter checks",
+    "step and active-time budgets",
+    "whole tool-exchange context pruning",
+    "actual provider usage response mapping",
+    "MCP discovery, typed output and Agent integration",
+    "new drafts use committed balances across runs",
+    "decline after committed crash reconciles completed outcome",
+    "missing provider usage stays unknown across rounds and cost"
+  ]
+}

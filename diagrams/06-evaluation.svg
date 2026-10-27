@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1080" viewBox="0 0 1440 1080" role="img" aria-labelledby="title desc">
+<title id="title">06  评测闭环：用证据决定下一次改动</title><desc id="desc">固定数据、模型与配置；按失败环节归因，保留独立验收集检验改进是否可复现。</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#54758a" stroke-width="1.6"/></marker><marker id="arrowAlt" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#b57a38" stroke-width="1.6"/></marker></defs>
+<style>text{font-family:"Noto Sans CJK SC","Microsoft YaHei","PingFang SC",Arial,sans-serif} .heading{font-size:31px;font-weight:700;fill:#15324f} .sub{font-size:18px;fill:#586f80} .cardtitle{font-size:22px;font-weight:650;fill:#15324f} .body{font-size:18px;fill:#233c50} .small{font-size:16px;fill:#586f80}</style>
+<rect width="1440" height="1080" fill="#f8fafc"/>
+<rect x="0" y="0" width="1440" height="8" fill="#087e8b"/>
+<text x="55" y="59" class="heading">06  评测闭环：用证据决定下一次改动</text>
+<text x="55" y="94" class="sub">固定数据、模型与配置；按失败环节归因，保留独立验收集检验改进是否可复现。</text>
+<rect x="35" y="135" width="1370" height="220" rx="20" fill="#eef5fa"/><text x="57" y="165" class="small" font-weight="700">实验输入 · 语料与答案严格分开</text>
+<rect x="60" y="185" width="400" height="130" rx="13" fill="#f1f5ff" stroke="#c9d7ed" stroke-width="1.5"/><rect x="60" y="200" width="5" height="100" rx="2" fill="#506da6"/>
+<text x="81" y="220" class="cardtitle" text-anchor="start">固定语料快照</text>
+<text x="81" y="250" class="body" text-anchor="start">只包含允许检索的原始资料</text>
+<text x="81" y="277" class="body" text-anchor="start">保留来源、版本、片段位置</text>
+<rect x="520" y="185" width="400" height="130" rx="13" fill="#fff8ee" stroke="#e9ceaa" stroke-width="1.5"/><rect x="520" y="200" width="5" height="100" rx="2" fill="#c47f31"/>
+<text x="541" y="220" class="cardtitle" text-anchor="start">问题与参考答案</text>
+<text x="541" y="250" class="body" text-anchor="start">按事件分组：开发集 / 验收集</text>
+<text x="541" y="277" class="body" text-anchor="start">答案和参考证据只用于评测</text>
+<rect x="980" y="185" width="400" height="130" rx="13" fill="#f1f5ff" stroke="#c9d7ed" stroke-width="1.5"/><rect x="980" y="200" width="5" height="100" rx="2" fill="#506da6"/>
+<text x="1001" y="220" class="cardtitle" text-anchor="start">版本化实验配置</text>
+<text x="1001" y="250" class="body" text-anchor="start">切分、Embedding、检索参数</text>
+<text x="1001" y="277" class="body" text-anchor="start">提示词、模型版本、评测规则</text>
+<rect x="35" y="390" width="1370" height="240" rx="20" fill="#eef5fa"/><text x="57" y="420" class="small" font-weight="700">实验运行 · 基线与候选方案使用相同条件</text>
+<rect x="60" y="445" width="400" height="125" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="60" y="460" width="5" height="95" rx="2" fill="#087e8b"/>
+<text x="81" y="480" class="cardtitle" text-anchor="start">基线 / 候选方案</text>
+<text x="81" y="510" class="body" text-anchor="start">每次验证一个主要假设</text>
+<text x="81" y="537" class="body" text-anchor="start">固定语料与题目，记录差异</text>
+<rect x="520" y="445" width="400" height="125" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="520" y="460" width="5" height="95" rx="2" fill="#087e8b"/>
+<text x="541" y="480" class="cardtitle" text-anchor="start">分层测量</text>
+<text x="541" y="510" class="body" text-anchor="start">检索：Hit / Recall / 排序</text>
+<text x="541" y="537" class="body" text-anchor="start">生成：给定证据与端到端分开</text>
+<rect x="980" y="445" width="400" height="125" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="980" y="460" width="5" height="95" rx="2" fill="#087e8b"/>
+<text x="1001" y="480" class="cardtitle" text-anchor="start">业务与运行测量</text>
+<text x="1001" y="510" class="body" text-anchor="start">正确 / 完整 / 引用 / 拒答</text>
+<text x="1001" y="537" class="body" text-anchor="start">权限、P95、失败率、单次成本</text>
+<path d="M 260 315 L 260 445" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<path d="M 720 315 L 720 445" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<path d="M 1180 315 L 1180 365 L 335 365 L 335 445" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<path d="M 460 505 L 520 505" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<path d="M 920 505 L 980 505" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<rect x="35" y="670" width="1370" height="245" rx="20" fill="#eef5fa"/><text x="57" y="700" class="small" font-weight="700">归因与发布 · 验收结果不用于反复挑选配置</text>
+<rect x="60" y="725" width="400" height="130" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="60" y="740" width="5" height="100" rx="2" fill="#087e8b"/>
+<text x="81" y="760" class="cardtitle" text-anchor="start">失败样本归因</text>
+<text x="81" y="790" class="body" text-anchor="start">解析 / 切分 / 召回 / 生成</text>
+<text x="81" y="817" class="body" text-anchor="start">逐条保存证据与失败原因</text>
+<rect x="520" y="725" width="400" height="130" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="520" y="740" width="5" height="100" rx="2" fill="#087e8b"/>
+<text x="541" y="760" class="cardtitle" text-anchor="start">修改并运行回归</text>
+<text x="541" y="790" class="body" text-anchor="start">先在开发集比较变化</text>
+<text x="541" y="817" class="body" text-anchor="start">连同关键权限与删除用例</text>
+<rect x="980" y="725" width="400" height="130" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="980" y="740" width="5" height="100" rx="2" fill="#087e8b"/>
+<text x="1001" y="760" class="cardtitle" text-anchor="start">发布门槛与独立验收</text>
+<text x="1001" y="790" class="body" text-anchor="start">质量、成本、时延共同判断</text>
+<text x="1001" y="817" class="body" text-anchor="start">达标后发布，保留回滚版本</text>
+<path d="M 1180 570 L 1180 645 L 260 645 L 260 725" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<path d="M 460 790 L 520 790" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<path d="M 920 790 L 980 790" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<path d="M 720 855 L 720 955 L 20 955 L 20 505 L 60 505" fill="none" stroke="#b57a38" stroke-width="2.3" stroke-dasharray="7 6" marker-end="url(#arrowAlt)" stroke-linejoin="round"/>
+<text x="760" y="962" class="small" text-anchor="start">下一轮：开发集驱动改进，独立验收集检验最终方案。</text>
+<line x1="55" y1="1004" x2="1385" y2="1004" stroke="#d7e2e9"/>
+<path d="M 58 1026 L 103 1026" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<text x="116" y="1032" class="small" text-anchor="start">主流程</text>
+<path d="M 215 1026 L 260 1026" fill="none" stroke="#b57a38" stroke-width="2.3" stroke-dasharray="7 6" marker-end="url(#arrowAlt)" stroke-linejoin="round"/>
+<text x="273" y="1032" class="small" text-anchor="start">后台任务 / 可选扩展</text>
+<text x="1385" y="1032" class="small" text-anchor="end">核心原则：先定义可观察的失败，再定义改进是否成立。</text>
+</svg>

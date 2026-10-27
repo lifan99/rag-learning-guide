@@ -1,0 +1,43 @@
+{
+  "description": "人工标签与真实结果台账。下面只有一条基于随附虚构制度的示例标签，没有执行结果。复制后替换或扩展自己的题目；不要把本文件放入检索语料。",
+  "cases": [
+    {
+      "case_id": "example-training-eligibility",
+      "split": "dev",
+      "case_type": "condition_negation",
+      "question": "入职六个月可以申请培训补贴吗？",
+      "access_scope": "employee",
+      "gold_document_ids": [
+        "training"
+      ],
+      "evidence": [
+        {
+          "document_id": "training",
+          "version": "v2",
+          "quote": "员工在职满一年，且培训在报名之前获得主管批准，才能申请培训补贴。"
+        }
+      ],
+      "expected_status": "answered",
+      "required_facts": [
+        "入职六个月尚未满足满一年条件",
+        "申请还需在培训报名前获得主管批准"
+      ],
+      "forbidden_claims": [
+        "满半年即可申请",
+        "已确认用户事先获批"
+      ]
+    }
+  ],
+  "run_record_fields": {
+    "case_id": "对应标签的 case_id",
+    "run_id": "本次唯一编号",
+    "mode": "fake 或 live；未调用时不要建立已完成记录",
+    "configuration": "模型、提示、数据版本、切分和检索配置，或配置文件路径",
+    "raw_result_path": "原始请求、候选、上下文、答案、引用与错误记录的位置",
+    "latency_ms": "实际观测值及口径；没有结果填 null",
+    "usage": "提供方实际返回的用量；缺失填 null",
+    "judgment": "facts_correct / conditions_complete / citations_supported / expected_behavior 各填 pass、fail 或 not_applicable",
+    "reason": "引用证据原句，说明失败或通过的依据；记录判定人和日期"
+  },
+  "runs": []
+}

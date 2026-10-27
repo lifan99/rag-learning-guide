@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1000" viewBox="0 0 1440 1000" role="img" aria-labelledby="title desc">
+<title id="title">02  求职项目：模块化单体</title><desc id="desc">先让每一层的职责和契约清楚，再用评测、错误案例与可重复运行证明工程能力。</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#54758a" stroke-width="1.6"/></marker><marker id="arrowAlt" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#b57a38" stroke-width="1.6"/></marker></defs>
+<style>text{font-family:"Noto Sans CJK SC","Microsoft YaHei","PingFang SC",Arial,sans-serif} .heading{font-size:31px;font-weight:700;fill:#15324f} .sub{font-size:18px;fill:#586f80} .cardtitle{font-size:22px;font-weight:650;fill:#15324f} .body{font-size:18px;fill:#233c50} .small{font-size:16px;fill:#586f80}</style>
+<rect width="1440" height="1000" fill="#f8fafc"/>
+<rect x="0" y="0" width="1440" height="8" fill="#087e8b"/>
+<text x="55" y="59" class="heading">02  求职项目：模块化单体</text>
+<text x="55" y="94" class="sub">先让每一层的职责和契约清楚，再用评测、错误案例与可重复运行证明工程能力。</text>
+<rect x="35" y="135" width="1370" height="195" rx="20" fill="#eef5fa"/><text x="57" y="165" class="small" font-weight="700">交互与服务入口</text>
+<rect x="60" y="185" width="400" height="110" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="60" y="200" width="5" height="80" rx="2" fill="#087e8b"/>
+<text x="81" y="220" class="cardtitle" text-anchor="start">命令行 / 简单页面</text>
+<text x="81" y="250" class="body" text-anchor="start">提交问题、展示片段与出处</text>
+<rect x="520" y="185" width="400" height="110" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="520" y="200" width="5" height="80" rx="2" fill="#087e8b"/>
+<text x="541" y="220" class="cardtitle" text-anchor="start">Web API · 当前可用 Flask</text>
+<text x="541" y="250" class="body" text-anchor="start">输入校验、请求标识、错误响应</text>
+<rect x="980" y="185" width="400" height="110" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="980" y="200" width="5" height="80" rx="2" fill="#087e8b"/>
+<text x="1001" y="220" class="cardtitle" text-anchor="start">可检查的输出</text>
+<text x="1001" y="250" class="body" text-anchor="start">答案、引用、耗时、状态</text>
+<path d="M 460 240 L 520 240" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<path d="M 920 240 L 980 240" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<rect x="35" y="360" width="1370" height="205" rx="20" fill="#eef5fa"/><text x="57" y="390" class="small" font-weight="700">业务服务 · 在同一个应用里明确模块边界</text>
+<rect x="60" y="415" width="400" height="115" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="60" y="430" width="5" height="85" rx="2" fill="#087e8b"/>
+<text x="81" y="450" class="cardtitle" text-anchor="start">IngestionService</text>
+<text x="81" y="480" class="body" text-anchor="start">读取 → 切分 → 嵌入 → 入库</text>
+<text x="81" y="507" class="body" text-anchor="start">记录来源与处理配置</text>
+<rect x="520" y="415" width="400" height="115" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="520" y="430" width="5" height="85" rx="2" fill="#087e8b"/>
+<text x="541" y="450" class="cardtitle" text-anchor="start">QueryService · Engine.ask</text>
+<text x="541" y="480" class="body" text-anchor="start">检索 → 组装证据 → 回答</text>
+<text x="541" y="507" class="body" text-anchor="start">为每一步留下可检查的结果</text>
+<rect x="980" y="415" width="400" height="115" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="980" y="430" width="5" height="85" rx="2" fill="#087e8b"/>
+<text x="1001" y="450" class="cardtitle" text-anchor="start">EvalRunner</text>
+<text x="1001" y="480" class="body" text-anchor="start">固定问题集、配置与指标</text>
+<text x="1001" y="507" class="body" text-anchor="start">调用问答服务，保存逐题结果</text>
+<path d="M 720 295 L 720 415" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<path d="M 630 295 L 630 345 L 260 345 L 260 415" fill="none" stroke="#b57a38" stroke-width="2.3" stroke-dasharray="7 6" marker-end="url(#arrowAlt)" stroke-linejoin="round"/>
+<path d="M 1180 415 L 1180 345 L 810 345 L 810 295" fill="none" stroke="#b57a38" stroke-width="2.3" stroke-dasharray="7 6" marker-end="url(#arrowAlt)" stroke-linejoin="round"/>
+<text x="1180" y="330" class="small" text-anchor="middle">虚线：可选 HTTP 评测</text>
+<rect x="35" y="600" width="1370" height="180" rx="20" fill="#eef5fa"/><text x="57" y="630" class="small" font-weight="700">接口与适配器 · 框架和供应商放在边界</text>
+<rect x="60" y="650" width="400" height="95" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="60" y="665" width="5" height="65" rx="2" fill="#087e8b"/>
+<text x="81" y="685" class="cardtitle" text-anchor="start">文档与切分适配器</text>
+<text x="81" y="715" class="body" text-anchor="start">按需用 LangChain 组件</text>
+<rect x="520" y="650" width="400" height="95" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="520" y="665" width="5" height="65" rx="2" fill="#087e8b"/>
+<text x="541" y="685" class="cardtitle" text-anchor="start">Retriever / VectorStore</text>
+<text x="541" y="715" class="body" text-anchor="start">Milvus 存储与检索</text>
+<rect x="980" y="650" width="400" height="95" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="980" y="665" width="5" height="65" rx="2" fill="#087e8b"/>
+<text x="1001" y="685" class="cardtitle" text-anchor="start">Embedder / Generator</text>
+<text x="1001" y="715" class="body" text-anchor="start">DashScope / Qwen，统一契约</text>
+<path d="M 260 530 L 260 650" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<path d="M 720 530 L 720 650" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<path d="M 980 470 L 920 470" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)"/><text x="950" y="452" class="small" text-anchor="middle">评测</text>
+<path d="M 310 530 L 310 574 L 680 574 L 680 650" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<path d="M 350 530 L 350 590 L 1130 590 L 1130 650" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<path d="M 800 530 L 800 558 L 1240 558 L 1240 650" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)"/>
+<text x="60" y="800" class="small">入库：解析＋嵌入＋写存储；问答：检索＋生成；评测：默认直接调用 Engine.ask。</text>
+<rect x="60" y="820" width="630" height="90" rx="13" fill="#f1f5ff" stroke="#c9d7ed" stroke-width="1.5"/><rect x="60" y="835" width="5" height="60" rx="2" fill="#506da6"/>
+<text x="81" y="855" class="cardtitle" text-anchor="start">知识数据：新闻原文 + 文档元数据</text>
+<text x="81" y="885" class="body" text-anchor="start">可建立索引；保留文件、位置与版本</text>
+<rect x="750" y="820" width="630" height="90" rx="13" fill="#fff8ee" stroke="#e9ceaa" stroke-width="1.5"/><rect x="750" y="835" width="5" height="60" rx="2" fill="#c47f31"/>
+<text x="771" y="855" class="cardtitle" text-anchor="start">评测数据：问题 + 参考答案 + 参考证据</text>
+<text x="771" y="885" class="body" text-anchor="start">只供评测；按事件分组切分开发与验收集</text>
+<line x1="55" y1="924" x2="1385" y2="924" stroke="#d7e2e9"/>
+<path d="M 58 946 L 103 946" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<text x="116" y="952" class="small" text-anchor="start">主流程</text>
+<path d="M 215 946 L 260 946" fill="none" stroke="#b57a38" stroke-width="2.3" stroke-dasharray="7 6" marker-end="url(#arrowAlt)" stroke-linejoin="round"/>
+<text x="273" y="952" class="small" text-anchor="start">后台任务 / 可选扩展</text>
+<text x="1385" y="952" class="small" text-anchor="end">核心原则：先做好模块边界与可重复证据。</text>
+</svg>

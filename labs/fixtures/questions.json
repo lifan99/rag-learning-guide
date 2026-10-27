@@ -1,0 +1,6 @@
+[
+  {"id": "q1", "question": "入职六个月可以申请培训补贴吗？", "gold_document_ids": ["training"]},
+  {"id": "q2", "question": "申请培训补贴需要提交哪些材料？", "gold_document_ids": ["training"]},
+  {"id": "q3", "question": "远程办公如何连接VPN？", "gold_document_ids": ["vpn"]},
+  {"id": "q4", "question": "培训补贴和差旅报销分别需要哪些申请材料？", "gold_document_ids": ["training", "travel"]}
+]

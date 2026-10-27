@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1100" viewBox="0 0 1440 1100" role="img" aria-labelledby="title desc">
+<title id="title">07  真实 RAG 服务：每一层都留下可检查的结果</title><desc id="desc">从离线链路演练切换到真实模型与索引；接口、证据身份和评测口径保持一致。</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#54758a" stroke-width="1.5"/></marker></defs>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif}.h{font-size:31px;font-weight:700;fill:#15324f}.s{font-size:18px;fill:#586f80}.t{font-size:23px;font-weight:650;fill:#15324f}.b{font-size:19px;fill:#233c50}.label{font-size:17px;fill:#087e8b;font-weight:700}</style>
+<rect width="1440" height="1100" fill="#f8fafc"/><rect width="1440" height="8" fill="#087e8b"/>
+<text x="55" y="64" class="h">07  真实 RAG 服务：每一层都留下可检查的结果</text><text x="55" y="105" class="s">从离线链路演练切换到真实模型与索引；接口、证据身份和评测口径保持一致。</text>
+<rect x="35" y="150" width="1370" height="240" rx="18" fill="#edf5fa"/><text x="58" y="183" class="label">准备资料 · ingest</text>
+<rect x="60" y="205" width="405" height="160" rx="12" fill="white" stroke="#c6dce4" stroke-width="1.5"/><rect x="60" y="219" width="5" height="132" rx="2" fill="#087e8b"/><text x="80" y="241" class="t">文档与片段</text>
+<text x="80" y="275" class="b">有效版本 / 授权组 / 来源</text>
+<text x="80" y="303" class="b">稳定片段 ID 与内容摘要</text>
+<text x="80" y="331" class="b">正文与评测答案分离</text>
+<path d="M467 285 H511" fill="none" stroke="#54758a" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="515" y="205" width="405" height="160" rx="12" fill="white" stroke="#c6dce4" stroke-width="1.5"/><rect x="515" y="219" width="5" height="132" rx="2" fill="#087e8b"/><text x="535" y="241" class="t">Embedding 接口</text>
+<text x="535" y="275" class="b">DashScope 兼容 REST</text>
+<text x="535" y="303" class="b">模型、维度与配置一起记录</text>
+<text x="535" y="331" class="b">批次输入与返回向量对齐</text>
+<path d="M922 285 H966" fill="none" stroke="#54758a" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="970" y="205" width="405" height="160" rx="12" fill="white" stroke="#c6dce4" stroke-width="1.5"/><rect x="970" y="219" width="5" height="132" rx="2" fill="#087e8b"/><text x="990" y="241" class="t">Milvus 索引</text>
+<text x="990" y="275" class="b">本地 Lite 或配置好的服务</text>
+<text x="990" y="303" class="b">向量与片段身份关联</text>
+<text x="990" y="331" class="b">模型空间变化时重新建库</text>
+<rect x="35" y="425" width="1370" height="240" rx="18" fill="#edf6f2"/><text x="58" y="458" class="label">在线问答 · POST /ask</text>
+<rect x="60" y="480" width="405" height="160" rx="12" fill="white" stroke="#c6dce4" stroke-width="1.5"/><rect x="60" y="494" width="5" height="132" rx="2" fill="#087e8b"/><text x="80" y="516" class="t">HTTP 与可信身份</text>
+<text x="80" y="550" class="b">校验问题长度和字段</text>
+<text x="80" y="578" class="b">访问范围来自服务端配置</text>
+<text x="80" y="606" class="b">每次请求关联 trace_id</text>
+<path d="M467 560 H511" fill="none" stroke="#54758a" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="515" y="480" width="405" height="160" rx="12" fill="white" stroke="#c6dce4" stroke-width="1.5"/><rect x="515" y="494" width="5" height="132" rx="2" fill="#087e8b"/><text x="535" y="516" class="t">混合召回与排序</text>
+<text x="535" y="550" class="b">稠密向量 + BM25 → RRF</text>
+<text x="535" y="578" class="b">候选去重、权限与版本复核</text>
+<text x="535" y="606" class="b">可选外部重排：记录收益与耗时</text>
+<path d="M922 560 H966" fill="none" stroke="#54758a" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="970" y="480" width="405" height="160" rx="12" fill="white" stroke="#c6dce4" stroke-width="1.5"/><rect x="970" y="494" width="5" height="132" rx="2" fill="#087e8b"/><text x="990" y="516" class="t">证据与模型</text>
+<text x="990" y="550" class="b">预算内放入完整证据</text>
+<text x="990" y="578" class="b">Qwen 返回 JSON 与引用 ID</text>
+<text x="990" y="606" class="b">模型调用具有明确超时</text>
+<rect x="35" y="700" width="1370" height="240" rx="18" fill="#fff6e9"/><text x="58" y="733" class="label">结果验收 · evaluate</text>
+<rect x="60" y="755" width="405" height="160" rx="12" fill="white" stroke="#c6dce4" stroke-width="1.5"/><rect x="60" y="769" width="5" height="132" rx="2" fill="#087e8b"/><text x="80" y="791" class="t">服务端结果检查</text>
+<text x="80" y="825" class="b">字段 / 状态 / 引用归属</text>
+<text x="80" y="853" class="b">返回前复核资料与访问版本</text>
+<text x="80" y="881" class="b">来源位置保留给前端</text>
+<path d="M467 835 H511" fill="none" stroke="#54758a" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="515" y="755" width="405" height="160" rx="12" fill="white" stroke="#c6dce4" stroke-width="1.5"/><rect x="515" y="769" width="5" height="132" rx="2" fill="#087e8b"/><text x="535" y="791" class="t">逐题记录</text>
+<text x="535" y="825" class="b">候选、上下文、答案、配置</text>
+<text x="535" y="853" class="b">召回率 / 条件完整 / 引用支持</text>
+<text x="535" y="881" class="b">耗时、调用数与 usage</text>
+<path d="M922 835 H966" fill="none" stroke="#54758a" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="970" y="755" width="405" height="160" rx="12" fill="white" stroke="#c6dce4" stroke-width="1.5"/><rect x="970" y="769" width="5" height="132" rx="2" fill="#087e8b"/><text x="990" y="791" class="t">比较与交付</text>
+<text x="990" y="825" class="b">固定题集对比检索配置</text>
+<text x="990" y="853" class="b">错误样本解释改变原因</text>
+<text x="990" y="881" class="b">运行命令、配置和报告可复现</text>
+<rect x="55" y="943" width="1330" height="48" rx="10" fill="#edf6f2" stroke="#479c84" stroke-dasharray="6 4"/>
+<text x="75" y="973" class="s">可选缓存扩展：当前授权 → GET；miss → 主链与结果复核 → SET EX；hit → 权限与版本复核 → 响应</text>
+<rect x="55" y="1000" width="1330" height="65" rx="12" fill="#e7eff4"/>
+<text x="78" y="1040" class="s">实线为现有 service_lab 主链；虚线缓存为第 14 章独立扩展，尚未接入该服务。fake 与 live 分开记录。</text></svg>

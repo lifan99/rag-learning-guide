@@ -1,0 +1,27 @@
+[
+  {
+    "id": "training", "version": "v2", "title": "员工培训补贴办法",
+    "text": "员工在职满一年，且培训在报名之前获得主管批准，才能申请培训补贴。每个自然年度补贴上限为2000元。申请时应提交课程发票及培训证明。",
+    "allowed_groups": ["employee"], "active": true
+  },
+  {
+    "id": "travel", "version": "v1", "title": "差旅报销办理指引",
+    "text": "员工出差前应提交差旅申请并获得主管批准。差旅报销需要交通票据、住宿发票和批准的申请单。完成出差后通过报销系统提交材料。",
+    "allowed_groups": ["employee"], "active": true
+  },
+  {
+    "id": "vpn", "version": "v1", "title": "远程办公与VPN连接",
+    "text": "远程办公访问公司内部系统时，先启动VPN客户端，再使用企业账号和第二验证因素登录。无法连接VPN时，请向IT服务台提供错误代码。",
+    "allowed_groups": ["employee"], "active": true
+  },
+  {
+    "id": "training", "version": "v1", "title": "员工培训补贴办法旧版",
+    "text": "员工在职满半年可申请培训补贴，年度上限为1000元。",
+    "allowed_groups": ["employee"], "active": false
+  },
+  {
+    "id": "finance-budget", "version": "v1", "title": "培训补贴预算工作表",
+    "text": "培训补贴预算工作表供财务组内部使用，包含培训补贴预算、培训补贴结余和各部门分配计划。",
+    "allowed_groups": ["finance"], "active": true
+  }
+]

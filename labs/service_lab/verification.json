@@ -1,0 +1,33 @@
+{
+  "verified_date": "2026-10-27",
+  "tests_passed": 11,
+  "dependencies": {
+    "Flask": "3.1.3",
+    "pymilvus": "2.6.17",
+    "milvus-lite": "3.2.2"
+  },
+  "executed": [
+    "Flask test_client request flow",
+    "local HTTP provider contract",
+    "real Milvus Lite upsert/search with deterministic model double",
+    "fake CLI ingest and evaluate",
+    "retrieval-mode branch isolation and fake rerank path"
+  ],
+  "not_executed": [
+    "paid DashScope embedding/rerank/generation requests",
+    "remote Milvus server",
+    "multi-user deployment"
+  ],
+  "fake_fixture_results": {
+    "k1": {
+      "hit_at_k": 1.0,
+      "recall_at_k": 0.875,
+      "mrr": 1.0
+    },
+    "k3": {
+      "hit_at_k": 1.0,
+      "recall_at_k": 1.0,
+      "mrr": 1.0
+    }
+  }
+}

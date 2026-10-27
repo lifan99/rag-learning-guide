@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1030" viewBox="0 0 1440 1030" role="img" aria-labelledby="title desc">
+<title id="title">03  异步入库：让新版本完整发布</title><desc id="desc">长任务允许重复执行；查询侧只读取已经发布、仍获授权的有效版本。</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#54758a" stroke-width="1.6"/></marker><marker id="arrowAlt" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#b57a38" stroke-width="1.6"/></marker></defs>
+<style>text{font-family:"Noto Sans CJK SC","Microsoft YaHei","PingFang SC",Arial,sans-serif} .heading{font-size:31px;font-weight:700;fill:#15324f} .sub{font-size:18px;fill:#586f80} .cardtitle{font-size:22px;font-weight:650;fill:#15324f} .body{font-size:18px;fill:#233c50} .small{font-size:16px;fill:#586f80}</style>
+<rect width="1440" height="1030" fill="#f8fafc"/>
+<rect x="0" y="0" width="1440" height="8" fill="#087e8b"/>
+<text x="55" y="59" class="heading">03  异步入库：让新版本完整发布</text>
+<text x="55" y="94" class="sub">长任务允许重复执行；查询侧只读取已经发布、仍获授权的有效版本。</text>
+<rect x="35" y="135" width="1370" height="430" rx="20" fill="#eef5fa"/><text x="57" y="165" class="small" font-weight="700">入库状态与版本构建 · 可以由独立 worker 执行</text>
+<rect x="60" y="190" width="275" height="120" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="60" y="205" width="5" height="90" rx="2" fill="#087e8b"/>
+<text x="81" y="225" class="cardtitle" text-anchor="start">接收文件</text>
+<text x="81" y="255" class="body" text-anchor="start">生成文档标识</text>
+<text x="81" y="282" class="body" text-anchor="start">原始文件不可变</text>
+<rect x="405" y="190" width="275" height="120" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="405" y="205" width="5" height="90" rx="2" fill="#087e8b"/>
+<text x="426" y="225" class="cardtitle" text-anchor="start">创建持久任务</text>
+<text x="426" y="255" class="body" text-anchor="start">记录 job_id 与状态</text>
+<text x="426" y="282" class="body" text-anchor="start">去重键包含版本与配置</text>
+<rect x="750" y="190" width="275" height="120" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="750" y="205" width="5" height="90" rx="2" fill="#087e8b"/>
+<text x="771" y="225" class="cardtitle" text-anchor="start">解析与校验</text>
+<text x="771" y="255" class="body" text-anchor="start">正文 / 表格 / OCR</text>
+<text x="771" y="282" class="body" text-anchor="start">失败有原因和重试策略</text>
+<rect x="1095" y="190" width="275" height="120" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="1095" y="205" width="5" height="90" rx="2" fill="#087e8b"/>
+<text x="1116" y="225" class="cardtitle" text-anchor="start">结构化切分</text>
+<text x="1116" y="255" class="body" text-anchor="start">来源、章节、片段位置</text>
+<text x="1116" y="282" class="body" text-anchor="start">稳定的片段标识</text>
+<path d="M 335 250 L 405 250" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<path d="M 680 250 L 750 250" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<path d="M 1025 250 L 1095 250" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<rect x="60" y="405" width="275" height="120" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="60" y="420" width="5" height="90" rx="2" fill="#087e8b"/>
+<text x="81" y="440" class="cardtitle" text-anchor="start">发布有效版本</text>
+<text x="81" y="470" class="body" text-anchor="start">业务库切换有效 generation</text>
+<text x="81" y="497" class="body" text-anchor="start">保留上一可用版本</text>
+<rect x="405" y="405" width="275" height="120" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="405" y="420" width="5" height="90" rx="2" fill="#087e8b"/>
+<text x="426" y="440" class="cardtitle" text-anchor="start">发布前检查</text>
+<text x="426" y="470" class="body" text-anchor="start">数量、索引可检索性</text>
+<text x="426" y="497" class="body" text-anchor="start">证据及权限字段齐全</text>
+<rect x="750" y="405" width="275" height="120" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="750" y="420" width="5" height="90" rx="2" fill="#087e8b"/>
+<text x="771" y="440" class="cardtitle" text-anchor="start">隔离构建区</text>
+<text x="771" y="470" class="body" text-anchor="start">写入新的 generation</text>
+<text x="771" y="497" class="body" text-anchor="start">尚不进入普通查询范围</text>
+<rect x="1095" y="405" width="275" height="120" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="1095" y="420" width="5" height="90" rx="2" fill="#087e8b"/>
+<text x="1116" y="440" class="cardtitle" text-anchor="start">批量 Embedding</text>
+<text x="1116" y="470" class="body" text-anchor="start">限流、超时、有限重试</text>
+<text x="1116" y="497" class="body" text-anchor="start">记录模型 / 维度 / 配置</text>
+<path d="M 1232 310 L 1232 405" fill="none" stroke="#b57a38" stroke-width="2.3" stroke-dasharray="7 6" marker-end="url(#arrowAlt)" stroke-linejoin="round"/>
+<path d="M 1095 465 L 1025 465" fill="none" stroke="#b57a38" stroke-width="2.3" stroke-dasharray="7 6" marker-end="url(#arrowAlt)" stroke-linejoin="round"/>
+<path d="M 750 465 L 680 465" fill="none" stroke="#b57a38" stroke-width="2.3" stroke-dasharray="7 6" marker-end="url(#arrowAlt)" stroke-linejoin="round"/>
+<path d="M 405 465 L 335 465" fill="none" stroke="#b57a38" stroke-width="2.3" stroke-dasharray="7 6" marker-end="url(#arrowAlt)" stroke-linejoin="round"/>
+<text x="60" y="605" class="body" text-anchor="start">查询条件：入库已 published，文档仍 active，发布版本与当前权限均通过核验。</text>
+<rect x="60" y="655" width="400" height="205" rx="13" fill="#fff8ee" stroke="#e9ceaa" stroke-width="1.5"/><rect x="60" y="670" width="5" height="175" rx="2" fill="#c47f31"/>
+<text x="81" y="690" class="cardtitle" text-anchor="start">重试与幂等</text>
+<text x="81" y="720" class="body" text-anchor="start">队列可能重复投递</text>
+<text x="81" y="747" class="body" text-anchor="start">同一任务重复写入不重复增量</text>
+<text x="81" y="774" class="body" text-anchor="start">失败记录：阶段 / 原因 / 次数</text>
+<text x="81" y="801" class="body" text-anchor="start">超出预算后转人工处理</text>
+<rect x="520" y="655" width="400" height="205" rx="13" fill="#f1f5ff" stroke="#c9d7ed" stroke-width="1.5"/><rect x="520" y="670" width="5" height="175" rx="2" fill="#506da6"/>
+<text x="541" y="690" class="cardtitle" text-anchor="start">跨存储一致性</text>
+<text x="541" y="720" class="body" text-anchor="start">SQL 与向量库通常无共同事务</text>
+<text x="541" y="747" class="body" text-anchor="start">先构建并验证，再发布版本</text>
+<text x="541" y="774" class="body" text-anchor="start">失败时保留旧有效版本</text>
+<text x="541" y="801" class="body" text-anchor="start">离线对账检查漏写 / 孤立记录</text>
+<rect x="980" y="655" width="400" height="205" rx="13" fill="#fff4f2" stroke="#ebc7be" stroke-width="1.5"/><rect x="980" y="670" width="5" height="175" rx="2" fill="#b85c45"/>
+<text x="1001" y="690" class="cardtitle" text-anchor="start">删除与撤销权限</text>
+<text x="1001" y="720" class="body" text-anchor="start">先在权威状态中禁止使用</text>
+<text x="1001" y="747" class="body" text-anchor="start">查询前 / 上下文前重新核验</text>
+<text x="1001" y="774" class="body" text-anchor="start">后台删除索引、缓存与副本</text>
+<text x="1001" y="801" class="body" text-anchor="start">完成后记录清理结果</text>
+<text x="60" y="886" class="small">入库任务：queued → processing → validated → published；处理失败记 failed。</text>
+<text x="60" y="912" class="small">文档访问状态：active / revoked；清理任务：pending → running → completed，或 failed。</text>
+<text x="60" y="938" class="small">撤权后可同时存在：入库 published、文档 revoked、清理 failed；三类对象独立记录。</text>
+<line x1="55" y1="954" x2="1385" y2="954" stroke="#d7e2e9"/>
+<path d="M 58 976 L 103 976" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<text x="116" y="982" class="small" text-anchor="start">主流程</text>
+<path d="M 215 976 L 260 976" fill="none" stroke="#b57a38" stroke-width="2.3" stroke-dasharray="7 6" marker-end="url(#arrowAlt)" stroke-linejoin="round"/>
+<text x="273" y="982" class="small" text-anchor="start">后台任务 / 可选扩展</text>
+<text x="1385" y="982" class="small" text-anchor="end">核心原则：失败不发布半成品，撤销不等待慢清理。</text>
+</svg>

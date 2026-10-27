@@ -1,0 +1,2 @@
+# The core lab uses only Python 3.11+ standard-library modules.
+mcp==2.3.0

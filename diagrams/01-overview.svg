@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1000" viewBox="0 0 1440 1000" role="img" aria-labelledby="title desc">
+<title id="title">01  一张图理解 RAG 的两条通路</title><desc id="desc">文档先变成可检索的证据；提问时只把相关且有权访问的证据交给模型。</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#54758a" stroke-width="1.6"/></marker><marker id="arrowAlt" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L8 5 L1 9" fill="none" stroke="#b57a38" stroke-width="1.6"/></marker></defs>
+<style>text{font-family:"Noto Sans CJK SC","Microsoft YaHei","PingFang SC",Arial,sans-serif} .heading{font-size:31px;font-weight:700;fill:#15324f} .sub{font-size:18px;fill:#586f80} .cardtitle{font-size:22px;font-weight:650;fill:#15324f} .body{font-size:18px;fill:#233c50} .small{font-size:16px;fill:#586f80}</style>
+<rect width="1440" height="1000" fill="#f8fafc"/>
+<rect x="0" y="0" width="1440" height="8" fill="#087e8b"/>
+<text x="55" y="59" class="heading">01  一张图理解 RAG 的两条通路</text>
+<text x="55" y="94" class="sub">文档先变成可检索的证据；提问时只把相关且有权访问的证据交给模型。</text>
+<rect x="35" y="135" width="1370" height="205" rx="20" fill="#eef5fa"/><text x="57" y="165" class="small" font-weight="700">离线准备 · 文档或配置变化时执行</text>
+<rect x="60" y="190" width="225" height="115" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="60" y="205" width="5" height="85" rx="2" fill="#087e8b"/>
+<text x="81" y="225" class="cardtitle" text-anchor="start">原始文档</text>
+<text x="81" y="255" class="body" text-anchor="start">新闻 / PDF / Word</text>
+<text x="81" y="282" class="body" text-anchor="start">保留来源与版本</text>
+<rect x="335" y="190" width="225" height="115" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="335" y="205" width="5" height="85" rx="2" fill="#087e8b"/>
+<text x="356" y="225" class="cardtitle" text-anchor="start">解析与清洗</text>
+<text x="356" y="255" class="body" text-anchor="start">正文与表格</text>
+<text x="356" y="282" class="body" text-anchor="start">保留章节与页码</text>
+<rect x="610" y="190" width="225" height="115" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="610" y="205" width="5" height="85" rx="2" fill="#087e8b"/>
+<text x="631" y="225" class="cardtitle" text-anchor="start">结构化切分</text>
+<text x="631" y="255" class="body" text-anchor="start">正文片段 + 元数据</text>
+<text x="631" y="282" class="body" text-anchor="start">完整语义优先</text>
+<rect x="885" y="190" width="225" height="115" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="885" y="205" width="5" height="85" rx="2" fill="#087e8b"/>
+<text x="906" y="225" class="cardtitle" text-anchor="start">Embedding</text>
+<text x="906" y="255" class="body" text-anchor="start">文本 → 稠密向量</text>
+<text x="906" y="282" class="body" text-anchor="start">记录模型与维度</text>
+<rect x="1160" y="190" width="225" height="115" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="1160" y="205" width="5" height="85" rx="2" fill="#087e8b"/>
+<text x="1181" y="225" class="cardtitle" text-anchor="start">构建索引</text>
+<text x="1181" y="255" class="body" text-anchor="start">文本 + 向量 + 标签</text>
+<text x="1181" y="282" class="body" text-anchor="start">检查后发布</text>
+<path d="M 285 248 L 335 248" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<path d="M 560 248 L 610 248" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<path d="M 835 248 L 885 248" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<path d="M 1110 248 L 1160 248" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<rect x="35" y="370" width="1370" height="220" rx="20" fill="#f0f2f8"/><text x="57" y="400" class="small" font-weight="700">三类数据 · 职责分开，位置可按阶段调整</text>
+<rect x="60" y="425" width="400" height="125" rx="13" fill="#f1f5ff" stroke="#c9d7ed" stroke-width="1.5"/><rect x="60" y="440" width="5" height="95" rx="2" fill="#506da6"/>
+<text x="81" y="460" class="cardtitle" text-anchor="start">原文与解析结果</text>
+<text x="81" y="490" class="body" text-anchor="start">可追溯、可重新解析</text>
+<text x="81" y="517" class="body" text-anchor="start">本地文件 / 对象存储</text>
+<rect x="520" y="425" width="400" height="125" rx="13" fill="#f1f5ff" stroke="#c9d7ed" stroke-width="1.5"/><rect x="520" y="440" width="5" height="95" rx="2" fill="#506da6"/>
+<text x="541" y="460" class="cardtitle" text-anchor="start">业务事实与权限</text>
+<text x="541" y="490" class="body" text-anchor="start">文档状态、ACL、有效版本</text>
+<text x="541" y="517" class="body" text-anchor="start">开发期轻量库 / 生产期 SQL</text>
+<rect x="980" y="425" width="400" height="125" rx="13" fill="#f1f5ff" stroke="#c9d7ed" stroke-width="1.5"/><rect x="980" y="440" width="5" height="95" rx="2" fill="#506da6"/>
+<text x="1001" y="460" class="cardtitle" text-anchor="start">派生检索索引</text>
+<text x="1001" y="490" class="body" text-anchor="start">Milvus：向量、关键词索引</text>
+<text x="1001" y="517" class="body" text-anchor="start">可从原文与配置重建</text>
+<path d="M 172 305 L 172 425" fill="none" stroke="#b57a38" stroke-width="2.3" stroke-dasharray="7 6" marker-end="url(#arrowAlt)" stroke-linejoin="round"/>
+<path d="M 1272 305 L 1272 425" fill="none" stroke="#b57a38" stroke-width="2.3" stroke-dasharray="7 6" marker-end="url(#arrowAlt)" stroke-linejoin="round"/>
+<rect x="35" y="625" width="1370" height="215" rx="20" fill="#eef5fa"/><text x="57" y="655" class="small" font-weight="700">在线问答 · 每次提问执行</text>
+<rect x="60" y="685" width="225" height="115" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="60" y="700" width="5" height="85" rx="2" fill="#087e8b"/>
+<text x="81" y="720" class="cardtitle" text-anchor="start">身份与范围</text>
+<text x="81" y="750" class="body" text-anchor="start">确认用户身份</text>
+<text x="81" y="777" class="body" text-anchor="start">确定可见资料</text>
+<rect x="335" y="685" width="225" height="115" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="335" y="700" width="5" height="85" rx="2" fill="#087e8b"/>
+<text x="356" y="720" class="cardtitle" text-anchor="start">授权检索</text>
+<text x="356" y="750" class="body" text-anchor="start">问题向量 + 过滤</text>
+<text x="356" y="777" class="body" text-anchor="start">取候选证据</text>
+<rect x="610" y="685" width="225" height="115" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="610" y="700" width="5" height="85" rx="2" fill="#087e8b"/>
+<text x="631" y="720" class="cardtitle" text-anchor="start">上下文组装</text>
+<text x="631" y="750" class="body" text-anchor="start">去重与长度预算</text>
+<text x="631" y="777" class="body" text-anchor="start">保留出处标识</text>
+<rect x="885" y="685" width="225" height="115" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="885" y="700" width="5" height="85" rx="2" fill="#087e8b"/>
+<text x="906" y="720" class="cardtitle" text-anchor="start">生成回答</text>
+<text x="906" y="750" class="body" text-anchor="start">Qwen 等模型</text>
+<text x="906" y="777" class="body" text-anchor="start">依据证据回答</text>
+<rect x="1160" y="685" width="225" height="115" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="1160" y="700" width="5" height="85" rx="2" fill="#087e8b"/>
+<text x="1181" y="720" class="cardtitle" text-anchor="start">引用与展示</text>
+<text x="1181" y="750" class="body" text-anchor="start">核对出处映射</text>
+<text x="1181" y="777" class="body" text-anchor="start">不足时说明</text>
+<path d="M 285 743 L 335 743" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<path d="M 560 743 L 610 743" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<path d="M 835 743 L 885 743" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<path d="M 1110 743 L 1160 743" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<path d="M 720 550 L 720 610 L 447 610 L 447 685" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<text x="748" y="602" class="small" text-anchor="start" style="fill:#506da6">权限约束</text>
+<path d="M 1180 550 L 1180 650 L 482 650 L 482 685" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<text x="1060" y="639" class="small" text-anchor="start" style="fill:#506da6">检索依据</text>
+<text x="60" y="885" class="body" text-anchor="start">评测题与参考答案单独保存；只有指定原始语料进入检索库。</text>
+<line x1="55" y1="924" x2="1385" y2="924" stroke="#d7e2e9"/>
+<path d="M 58 946 L 103 946" fill="none" stroke="#54758a" stroke-width="2.3" marker-end="url(#arrow)" stroke-linejoin="round"/>
+<text x="116" y="952" class="small" text-anchor="start">主流程</text>
+<path d="M 215 946 L 260 946" fill="none" stroke="#b57a38" stroke-width="2.3" stroke-dasharray="7 6" marker-end="url(#arrowAlt)" stroke-linejoin="round"/>
+<text x="273" y="952" class="small" text-anchor="start">后台任务 / 可选扩展</text>
+<text x="1385" y="952" class="small" text-anchor="end">核心原则：索引可重建，证据可追溯。</text>
+</svg>
