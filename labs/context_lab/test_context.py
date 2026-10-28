@@ -37,6 +37,9 @@ class ContextTests(unittest.TestCase):
         self.assertEqual(result["selected_documents"], ["training/v2", "travel/v1"])
         body = result["messages"][-1]["content"]
         self.assertIn(docs[0].text, body)
+        # This checks the fixture contract, not a model answer or semantic judge.
+        for condition in ("满一年", "报名之前", "主管批准", "年度补贴上限为2000元"):
+            self.assertIn(condition, body)
         self.assertNotIn("模型猜测", body)
         self.assertLessEqual(result["input_count"] + result["reserved_output"], result["budget"])
 
@@ -49,7 +52,7 @@ class ContextTests(unittest.TestCase):
 
     def test_complementary_chunks_from_same_document_are_kept(self):
         docs = [Evidence("training/v2", "C0", "长文" * 2000),
-                Evidence("training/v2", "C1", "须满一年且事先批准。"),
+                Evidence("training/v2", "C1", "须满一年，并在报名之前获得主管批准。"),
                 Evidence("training/v2", "C2", "年度上限2000元。"),
                 Evidence("training/v2", "C3", "年度上限2000元。")]
         result = assemble("补贴条件和金额", docs, [], [], groups={"employee"}, counter=ByteCounter())

@@ -144,16 +144,16 @@ def validate_answer(raw, allowed_citations):
 
 def fixture():
     evidence = [
-        Evidence("training/v2", "C1", "员工在职满一年，培训事先获批，每年补贴上限为2000元。"),
+        Evidence("training/v2", "C1", "员工在职满一年，并在报名之前获得主管批准，年度补贴上限为2000元。"),
         Evidence("travel/v1", "C2", "差旅申请应在出行前提交，交通费用按审批范围报销。"),
-        Evidence("training/v2", "C3", "员工在职满一年，培训事先获批，每年补贴上限为2000元。"),
+        Evidence("training/v2", "C3", "员工在职满一年，并在报名之前获得主管批准，年度补贴上限为2000元。"),
         Evidence("finance/v1", "C4", "仅财务可见的预算。", ("finance",)),
         Evidence("training/v1", "C5", "旧制度上限1000元。", active=False),
     ]
     turns = [
         [{"role": "user", "content": "我还想讨论一些别的问题。" * 18},
          {"role": "assistant", "content": "过去的模型回答，不是经过核实的业务事实。" * 18}],
-        [{"role": "user", "content": "我入职十四个月，课程已提前批准。"},
+        [{"role": "user", "content": "我入职十四个月，报名之前已获得主管批准。"},
          {"role": "assistant", "content": "我们正在查询培训补贴制度。"}],
     ]
     facts = [{"text": "用户确认本轮讨论的是培训补贴。", "source": "user", "confirmed": True},

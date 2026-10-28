@@ -112,6 +112,8 @@ python labs/agent_lab/agent_lab.py resume --db "./training-mcp.sqlite3" --run-id
 
 第一条的两个读取步骤通过 MCP，prepare_application 与确认提交保留在宿主。
 这展示了协议适配器的职责：替换工具连接方法，同时保留执行器的业务规则。
+此处仍使用 ScriptedDriver，不会把动态发现的描述自动接到真实模型。当前
+政策与员工事实是固定教学数据，尚未调用 service_lab 的 RAG 检索服务。
 工具返回错误时，先检查 is_error，再读取 structured_content；本实验对失败
 读取停止运行。连接与协议协商由 SDK 管理。网络部署时，宿主身份应来自服务端
 认证流程，再按资源范围授权，不能把本地固定身份直接用于多人服务。
@@ -148,6 +150,8 @@ agent-trace.jsonl。每行包含 experiment_id、run_id、模式、模型名、�
 --max-steps、--max-seconds 与 --context-bytes 同样约束评测中的运行循环。
 证据最多保留 32 个工具动作和 16 行最终申请，字符串标识最多保留 160 字符，
 截断列表带有相应的 *_truncated 标记；业务比较仍使用全部原始行。
+active_ms 只计运行循环的主动耗时，不包含之后 approve 的全部提交工作或
+人工等待。正确拒绝应零写入，也可以通过对应场景；不要用写入数量代替通过数。
 模型名最多保留 120 字符。证据不复制原始模型输入输出、任意工具文本、
 提供商错误正文或 API Key；errors 只记录阶段、异常类别及是否为预期故障。
 resume_after_commit 的预期中断会单独标记，其他批准异常使该场景失败并保留证据。
