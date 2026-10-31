@@ -11,7 +11,7 @@
 <text x="81" y="220" class="cardtitle" text-anchor="start">命令行 / 简单页面</text>
 <text x="81" y="250" class="body" text-anchor="start">提交问题、展示片段与出处</text>
 <rect x="520" y="185" width="400" height="110" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="520" y="200" width="5" height="80" rx="2" fill="#087e8b"/>
-<text x="541" y="220" class="cardtitle" text-anchor="start">Web API · 当前可用 Flask</text>
+<text x="541" y="220" class="cardtitle" text-anchor="start">Web API · FastAPI</text>
 <text x="541" y="250" class="body" text-anchor="start">输入校验、请求标识、错误响应</text>
 <rect x="980" y="185" width="400" height="110" rx="13" fill="#ffffff" stroke="#c6dce4" stroke-width="1.5"/><rect x="980" y="200" width="5" height="80" rx="2" fill="#087e8b"/>
 <text x="1001" y="220" class="cardtitle" text-anchor="start">可检查的输出</text>

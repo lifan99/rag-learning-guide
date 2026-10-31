@@ -35,5 +35,5 @@ validate_answer 检查 JSON 字段、状态和引用归属；引用存在不代�
 练习：构造一份字段合法但金额错误的回答，说明为什么仍需事实/条件评分。
 evaluate 的两项结果检查预算和培训证据保留，衡量的是上下文构造，不是生成准确率。
 
-对应教材第20章；官方参考：
+对应教材第13章；官方参考：
 https://huggingface.co/docs/transformers/main/en/chat_templating

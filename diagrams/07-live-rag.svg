@@ -52,4 +52,4 @@
 <rect x="55" y="943" width="1330" height="48" rx="10" fill="#edf6f2" stroke="#479c84" stroke-dasharray="6 4"/>
 <text x="75" y="973" class="s">可选缓存扩展：当前授权 → GET；miss → 主链与结果复核 → SET EX；hit → 权限与版本复核 → 响应</text>
 <rect x="55" y="1000" width="1330" height="65" rx="12" fill="#e7eff4"/>
-<text x="78" y="1040" class="s">服务输出另需人工质量复核；虚线缓存为第 14 章独立扩展，尚未接入。fake 与 live 分开记录。</text></svg>
+<text x="78" y="1040" class="s">服务输出另需人工质量复核；虚线缓存为第 16 章独立扩展，尚未接入。fake 与 live 分开记录。</text></svg>
